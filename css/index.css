@@ -206,3 +206,44 @@ footer nav a {
     color: white;
     text-decoration: none;
 }
+
+/* About Page */
+
+.top-content-about {
+    border-bottom: 1px dashed black;
+    padding: 0 20px 20px;
+}
+
+.middle-content-about .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.middle-content-about .about-box {
+    padding: 30px 0 20px 0;
+    margin-bottom: 30px;
+    width: 360px;
+    border-bottom: 1px dashed black;
+}
+
+.middle-content-about .about-box img {
+    width: 100%;
+}
+
+.middle-content-about .about-box h2 {
+    margin-top: 15px;
+}
+
+.middle-content-about button {
+    margin-top: 20px;
+    padding: 5px 20px;
+    background: white;
+    font-size: 17px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.bottom-content-about {
+    padding: 20px 20px 50px 20px;
+}
