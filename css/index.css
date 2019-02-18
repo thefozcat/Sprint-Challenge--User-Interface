@@ -69,7 +69,7 @@ p {
 /* Global Styles */
 
 .container {
-    width: 800px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -118,6 +118,30 @@ header .main-nav a {
     transform: scale(1.1);
 }
 
+footer {
+    width: 100%;
+    background: black;
+}
+
+footer nav {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 2%;
+    font-size: 14px;
+}
+
+footer nav a {
+    color: white;
+    text-decoration: none;
+}
+
+footer nav a:hover {
+    color: rgb(150, 150, 150);
+    transition: all 200ms ease;
+}
+
 /* Home Page */
 
 .top-content-home {
@@ -150,7 +174,7 @@ header .main-nav a {
 }
 
 .middle-content-home .boxes .box {
-    width: 12.5%;
+    width: 100px;
     height: 100px;
     background: black;
     margin: 20px 2.5%;
@@ -219,25 +243,6 @@ header .main-nav a {
     padding-right: 0;
 }
 
-footer {
-    width: 100%;
-    background: black;
-}
-
-footer nav {
-    width: 60%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 2%;
-    font-size: 14px;
-}
-
-footer nav a {
-    color: white;
-    text-decoration: none;
-}
-
 /* About Page */
 
 .top-content-about {
@@ -270,11 +275,6 @@ footer nav a {
     padding: 20px 20px 50px 20px;
 }
 
-footer nav a:hover {
-    color: rgb(150, 150, 150);
-    transition: all 200ms ease;
-}
-
 /* Products Page */
 
 .top-content-products {
@@ -284,6 +284,7 @@ footer nav a:hover {
 
 .middle-content-products .boxes {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
@@ -300,4 +301,62 @@ footer nav a:hover {
 
 .middle-content-products .product-box h2 {
     margin-top: 15px;
+}
+
+.bottom-content-products {
+    padding: 20px 20px 50px 20px;
+}
+
+/* Media Queries */
+
+@media(max-width: 500px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .main-nav {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .top-content-home {
+        display: block;
+        padding: 0 20px;
+    }
+
+    .top-content-home .text-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .middle-content-home {
+        text-align: center;
+    }
+
+    .bottom-content-home {
+        display: block;
+        text-align: center;
+    }
+
+    .bottom-content-home .text-container {
+        margin-top: 20px;
+    }
+
+    footer nav {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .top-content-about, .middle-content-about, .bottom-content-about,
+    .top-content-products, .middle-content-products, .bottom-content-products {
+        text-align: center;
+    }
+
+    .middle-content-about .about-box,
+    .middle-content-products .product-box {
+        width: 90%;
+        text-align: center;
+    }
 }
